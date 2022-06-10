@@ -1,5 +1,8 @@
-title: Read The Docs Jekyll Theme
-description: Port of the Read the Docs theme to Jekyll to use with GitHub Pages.
+# title: NuriFlex Docs Home
+# description: Port of the Read the Docs theme to Jekyll to use with GitHub Pages.
+
+# From Docs
+# remote_theme: carlosperate/jekyll-theme-rtd
 
 # Development server config, needed to load some of the content
 webrick:
@@ -7,11 +10,37 @@ webrick:
     Access-Control-Allow-Origin: "*"
 
 # Theme settings
-site_author: Carlos Pereira Atencio
-repo_url: 'https://github.com/carlosperate/jekyll-theme-rtd'
-edit_on_github: true
-github_docs_folder: false
-sticky_navigation: true
-prev_next_buttons_location: both
-search_enabled: true
-hljs_style: github-gist
+# site_author: NuriFlex Product Management Team
+# repo_url: 'https://github.com/carlosperate/jekyll-theme-rtd'
+# edit_on_github: true
+# github_docs_folder: false
+# sticky_navigation: true
+# prev_next_buttons_location: both
+# search_enabled: true
+# hljs_style: github-gist
+
+# logo: 'assets/img/nuriflex_01.png'
+
+# Site Settings from versions-jekyll
+# theme                    : minimal-mistakes-jekyll
+locale                   : "en"
+title                    : "Nuri Docs Home Example"
+title_separator          : "-"
+name                     : "Sites for Version and Project"
+description              : "An example site and repo for controlling versions of a web site."
+
+##version
+# url: http://127.0.0.1:4000
+# baseurl: /latest # the subpath of the site, represents version in this example repo
+# repository: ejkim-jobs/ejkim-jobs.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+# repo: ejkim-jobs.github.io
+
+# permalink: /:title/
+
+# logo: 'assets/img/nuriflex_01.png'
+url: https://ejkim-jobs.github.io
+baseurl:
+
+exclude:
+  - v1
+  - p1

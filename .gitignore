@@ -4,8 +4,8 @@
 .vscode/
 .vagrant/
 .sass-cache
-_site/
-_site_mkdocs/
+#_site/
+#_site_mkdocs/
 
 ###########
 # Node.js #
