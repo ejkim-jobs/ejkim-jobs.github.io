@@ -1,21 +1,15 @@
-<<<<<<< HEAD
 # title: NuriFlex Docs Home
 # description: Port of the Read the Docs theme to Jekyll to use with GitHub Pages.
 
 # From Docs
-# remote_theme: carlosperate/jekyll-theme-rtd
-=======
-title: NuriFlex Docs Home
-description: Port of the Read the Docs theme to Jekyll to use with GitHub Pages.
-remote_theme: carlosperate/jekyll-theme-rtd
->>>>>>> f30abec875b5ef34595e30f631c549b1510590a9
+# remote_theme: carlosperate/jekyll-theme-rt
+
 
 # Development server config, needed to load some of the content
 webrick:
   headers:
     Access-Control-Allow-Origin: "*"
 
-<<<<<<< HEAD
 # Theme settings
 # site_author: NuriFlex Product Management Team
 # repo_url: 'https://github.com/carlosperate/jekyll-theme-rtd'
@@ -45,13 +39,11 @@ description              : "An example site and repo for controlling versions of
 # permalink: /:title/
 
 # logo: 'assets/img/nuriflex_01.png'
-url: https://ejkim-jobs.github.io
-baseurl:
 
 exclude:
   - v1
   - p1
-=======
+
 # Theme settings:
 site_author: NuriFlex Co., Ltd. Product Management team
 repo_url: "https://github.com/ejkim-jobs/ejkim-jobs.github.io"
@@ -62,13 +54,13 @@ prev_next_buttons_location: bottom
 search_enabled: true
 hljs_style: github-gist
 
-plugins:
-  - jekyll-remote-theme
+#plugins:
+#  - jekyll-remote-theme
 
 url: https://ejkim-jobs.github.io
-baseurl: /p1/ # the subpath of the site, represents version in this example repo
+baseurl:  # the subpath of the site, represents version in this example repo
 
 logo: 'https://cdn.gukjenews.com/news/photo/202105/2231928_2223755_5416.jpeg'
 
 # theme: jekyll-theme-rtd
->>>>>>> f30abec875b5ef34595e30f631c549b1510590a9
+
