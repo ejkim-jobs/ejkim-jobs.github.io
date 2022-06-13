@@ -40,9 +40,9 @@ description              : "An example site and repo for controlling versions of
 
 # logo: 'assets/img/nuriflex_01.png'
 
-#exclude:
-#  - v1
-#  - p1
+exclude:
+  - v1
+  - p1
 
 # Theme settings:
 site_author: NuriFlex Co., Ltd. Product Management team
