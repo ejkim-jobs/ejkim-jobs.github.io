@@ -1,6 +1,6 @@
 title: NuriFlex Docs Home
 description: Port of the Read the Docs theme to Jekyll to use with GitHub Pages.
-remote_theme: carlosperate/jekyll-theme-rtd
+# remote_theme: carlosperate/jekyll-theme-rtd
 
 # Development server config, needed to load some of the content
 webrick:
@@ -10,7 +10,7 @@ webrick:
 
 # Theme settings:
 site_author: NuriFlex Co., Ltd. Product Management team
-repo_url: "https://github.com/ejkim-jobs/ejkim-jobs.github.io"
+repo_url: "https://github.com/nuridocs/nuridocs.github.io"
 edit_on_github: true
 github_docs_folder: true
 sticky_navigation: true
@@ -18,11 +18,12 @@ prev_next_buttons_location: bottom
 search_enabled: true
 hljs_style: github-gist
 
-plugins:
-  - jekyll-remote-theme
+# plugins:
+#  - jekyll-remote-theme
 
-url: https://ejkim-jobs.github.io
-baseurl: /v1/ # the subpath of the site, represents version in this example repo
+url: https://nuridocs.github.io
+baseurl: /v1 # the subpath of the site, represents version in this example repo
 
 logo: 'https://cdn.gukjenews.com/news/photo/202105/2231928_2223755_5416.jpeg'
-# theme: jekyll-theme-rtd
+
+theme: jekyll-theme-rtd

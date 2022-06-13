@@ -40,13 +40,13 @@ description              : "An example site and repo for controlling versions of
 
 # logo: 'assets/img/nuriflex_01.png'
 
-exclude:
-  - v1
-  - p1
+#exclude:
+#  - v1
+#  - p1
 
 # Theme settings:
 site_author: NuriFlex Co., Ltd. Product Management team
-repo_url: "https://github.com/ejkim-jobs/ejkim-jobs.github.io"
+repo_url: "https://github.com/nuridocs/nuridocs.github.io"
 edit_on_github: true
 github_docs_folder: False
 sticky_navigation: true
@@ -57,7 +57,7 @@ hljs_style: github-gist
 #plugins:
 #  - jekyll-remote-theme
 
-url: https://ejkim-jobs.github.io
+url: https://nuridocs.github.io
 baseurl:  # the subpath of the site, represents version in this example repo
 
 logo: 'https://cdn.gukjenews.com/news/photo/202105/2231928_2223755_5416.jpeg'
