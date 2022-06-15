@@ -28,4 +28,4 @@ logo: 'https://cdn.gukjenews.com/news/photo/202105/2231928_2223755_5416.jpeg'
 
 theme: jekyll-theme-rtd
 
-permalink: /p1/:categories/:title
+permalink: /:categories/:title
