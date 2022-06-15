@@ -44,7 +44,7 @@
                 {% endif %}
             {%- endif %}
         {%- else %}
-            {%- assign sections = sections | append: path_array[1] | append: "|" %}
+            {%- assign sections = sections | append: path_array[2] | append: "|" %}
         {%- endif %}
     {%- endif %}
 {%- endfor %}
@@ -54,7 +54,7 @@
     <p class="caption"><span class="caption-text">{{ section }}</span></p>
     {%- for nav_item in nav %}
         {%- assign path_array = nav_item.dir | split: "/" %}
-        {%- assign page_section = path_array[1] %}
+        {%- assign page_section = path_array[2] %}
         {%- if page_section == section and nav_item.hide != true and nav_item.nav_exclude != true %}
             {%- if nav_item.url == page.url %}
                 {%- include toc.html html=content sanitize=true h_max=4 item_class="toctree-l%level%" %} 

@@ -9,7 +9,6 @@
 
 /* sphinx_rtd_theme version 0.4.1 | MIT license */
 
-
 /* Built 20180727 10:07 */
 
 * {
@@ -5920,7 +5919,7 @@ article ol li ul li {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 80%;
-    white-space: nowrap;
+    white-space: pre;/*nowrap; */
     color: #2980B9;
     /*220608*/
 }
@@ -6001,8 +6000,14 @@ article ol li ul li {
 
 .wy-menu-vertical li.toctree-l1.current>a {
     border-bottom: solid 1px #c9c9c9;
-    border-top: solid 1px #c9c9c9
+    border-top: solid 1px #c9c9c9;
+    color: #333
 }
+
+
+/* .wy-menu-vertical li.toctree-l1 a {
+    color: #1b8fac
+} */
 
 .wy-menu-vertical li.toctree-l2 a,
 .wy-menu-vertical li.toctree-l3 a,
@@ -6693,7 +6698,9 @@ footer span.commit .rst-content tt,
 
 .rst-content pre.literal-block,
 .rst-content div[class^='highlight'] {
-    border: 1px solid #e1e4e5;
+    /* border: 1px solid #e1e4e5; 0608*/
+    border: thin solid #bcbec0;
+    /* border-color: #696969; */
     overflow-x: auto;
     margin: 1px 0 24px 0
 }
@@ -6721,8 +6728,10 @@ footer span.commit .rst-content tt,
 .rst-content div[class^='highlight'] pre {
     white-space: pre;
     margin: 0;
-    padding: 12px 12px;
-    display: block;
+    padding: 0;
+    /* display: block; */
+    display: inline;
+    /*0608*/
     overflow: auto
 }
 
