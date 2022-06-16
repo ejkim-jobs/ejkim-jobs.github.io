@@ -3,6 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% if page and page.excerpt %}<meta name="description" content="{{ page.excerpt }}">
@@ -16,8 +17,10 @@
   <title>{% if page and page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
-  <link rel="stylesheet" href="{{ 'assets/css/theme.css' | absolute_url }}" />
-  <link rel="stylesheet" href="{{ 'assets/css/theme_extra.css' | absolute_url }}" />
+  <!-- <link rel="stylesheet" href="{{ 'assets/css/theme.css' | absolute_url }}" /> -->
+   <link rel="stylesheet" href="{{ site.url }}/assets/css/theme.css">
+  <!-- <link rel="stylesheet" href="{{ 'assets/css/theme_extra.css' | absolute_url }}" /> -->
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/theme_extra.css">
   {%- if site.hljs_style %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{site.hljs_style}}.min.css" />
   {%- else %}
@@ -36,9 +39,11 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
           {%- if site.logo %}
-            <a href="{{ site.url | absolute_url }}{{ site.github.baseurl }}"><img src="{{ site.logo }}" class="logo" alt="Logo"></a>
+            <!-- <a href="{{ site.url | absolute_url }}{{ site.github.baseurl }}"><img src="{{ site.logo }}" class="logo" alt="Logo"></a> -->
+            <a href="{{ site.url}}"><img src="{{ site.logo }}" class="logo" alt="Logo"></a>
           {%- else %}
-            <a href="{{ site.url | absolute_url }}{{ site.github.baseurl }}" class="icon icon-home"> {{ site.title }}</a>
+            <a href="{{ site.url }}" class="icon icon-home"> {{ site.title }}</a>
+            <!-- <a href="{{ site.url | absolute_url }}{{ site.github.baseurl }}" class="icon icon-home"> {{ site.title }}</a> -->
           {%- endif %}
           {% unless site.search_enabled == false %}{% include searchbox.html %}{% endunless %}
         </div>
@@ -76,11 +81,14 @@
 
   {% include versions.html %}
 
-  <script>var base_url = '{{ baseurl }}';</script>
-  <script src="{{ 'assets/js/jquery-2.1.1.min.js' | absolute_url }}" defer></script>
-  <script src="{{ 'assets/js/modernizr-2.8.3.min.js' | absolute_url }}" defer></script>
+  <script>var base_url = '{{ site.baseurl }}';</script>
+  <!-- <script src="{{ 'assets/js/jquery-2.1.1.min.js' | absolute_url }}" defer></script> -->
+  <script src="{{ site.url }}/assets/js/jquery-2.1.1.min.js" defer></script>
+  <!-- <script src="{{ 'assets/js/modernizr-2.8.3.min.js' | absolute_url }}" defer></script> -->
+  <script src="{{ site.url }}/assets/js/modernizr-2.8.3.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script src="{{ 'assets/js/theme.js' | absolute_url }}" defer></script>
+  <!-- <script src="{{ 'assets/js/theme.js' | absolute_url }}" defer></script> -->
+  <script src="{{ site.url }}/assets/js/theme.js" defer></script>
   <script type="text/javascript" defer>
     hljs.initHighlightingOnLoad();
     window.addEventListener('load', function() {

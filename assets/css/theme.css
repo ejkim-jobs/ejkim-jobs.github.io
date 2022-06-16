@@ -111,6 +111,7 @@ samp {
 
 pre {
     white-space: pre
+    /* background-color: #f1bbb5 */
 }
 
 q {
@@ -6724,6 +6725,7 @@ footer span.commit .rst-content tt,
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace;
     user-select: none;
     pointer-events: none
+    
 }
 
 .rst-content div[class^='highlight'] pre {

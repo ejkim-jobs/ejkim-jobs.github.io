@@ -21,7 +21,7 @@ hljs_style: github-gist
 # plugins:
 #  - jekyll-remote-theme
 
-url: https://nuridocs.github.io
+# url: https://nuridocs.github.io
 # baseurl: /p1 # the subpath of the site, represents version in this example repo
 
 logo: 'https://cdn.gukjenews.com/news/photo/202105/2231928_2223755_5416.jpeg'
@@ -29,3 +29,24 @@ logo: 'https://cdn.gukjenews.com/news/photo/202105/2231928_2223755_5416.jpeg'
 theme: jekyll-theme-rtd
 
 permalink: /:categories/:title
+
+###
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+mathjax: true
+
+plugins:
+  - jekyll-mentions
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-toc #210910
+
+jekyll-mentions:
+  base_url: https://github.com
