@@ -1,48 +1,12 @@
-# title: NuriFlex Docs Home
-# description: Port of the Read the Docs theme to Jekyll to use with GitHub Pages.
-
-# From Docs
-# remote_theme: carlosperate/jekyll-theme-rt
-
+title: NuriFlex Docs Home
+title_separator: "-"
+description: Port of the Read the Docs theme to Jekyll to use with GitHub Pages.
+# remote_theme: carlosperate/jekyll-theme-rtd
 
 # Development server config, needed to load some of the content
 webrick:
   headers:
     Access-Control-Allow-Origin: "*"
-
-# Theme settings
-# site_author: NuriFlex Product Management Team
-# repo_url: 'https://github.com/carlosperate/jekyll-theme-rtd'
-# edit_on_github: true
-# github_docs_folder: false
-# sticky_navigation: true
-# prev_next_buttons_location: both
-# search_enabled: true
-# hljs_style: github-gist
-
-# logo: 'assets/img/nuriflex_01.png'
-
-# Site Settings from versions-jekyll
-# theme                    : minimal-mistakes-jekyll
-locale                   : "en"
-title                    : "Nuri Docs Home Example"
-title_separator          : "-"
-name                     : "Sites for Version and Project"
-description              : "An example site and repo for controlling versions of a web site."
-
-##version
-# url: http://127.0.0.1:4000
-# baseurl: /latest # the subpath of the site, represents version in this example repo
-# repository: ejkim-jobs/ejkim-jobs.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-# repo: ejkim-jobs.github.io
-
-# permalink: /:title/
-
-# logo: 'assets/img/nuriflex_01.png'
-
-exclude:
-  - v1
-  - p1
 
 # Theme settings:
 site_author: NuriFlex Co., Ltd. Product Management team
@@ -54,13 +18,35 @@ prev_next_buttons_location: bottom
 search_enabled: true
 hljs_style: github-gist
 
-#plugins:
+# plugins:
 #  - jekyll-remote-theme
 
-url: https://nuridocs.github.io
-baseurl:  # the subpath of the site, represents version in this example repo
+# url: https://nuridocs.github.io
+# baseurl: /p1 # the subpath of the site, represents version in this example repo
 
 logo: 'https://cdn.gukjenews.com/news/photo/202105/2231928_2223755_5416.jpeg'
 
-# theme: jekyll-theme-rtd
+theme: jekyll-theme-rtd
 
+permalink: /:categories/:title
+
+###
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+mathjax: true
+
+plugins:
+  - jekyll-mentions
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-toc #210910
+
+jekyll-mentions:
+  base_url: https://github.com

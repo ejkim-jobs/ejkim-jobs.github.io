@@ -2,6 +2,7 @@
 layout: default
 title: Pages Configuration
 nav_order: 2
+category: p1
 ---
 
 # Pages Configuration

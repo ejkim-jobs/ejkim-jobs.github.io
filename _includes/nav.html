@@ -19,7 +19,9 @@
 {%- assign set_next_page = false %}
 {%- assign nav = site.pages | sort:"nav_order" %}
 
+
 {%- comment %} First loop to print pages without categories and collect an array of categories {%- endcomment %}
+
 {%- for nav_item in nav %}
     {%- if nav_item.hide != true and nav_item.nav_exclude != true %}
         {%- assign path_array = nav_item.dir | split: "/" %}
@@ -32,6 +34,7 @@
                     {%- assign set_next_page = true %}
                 {%- endif %}
             {%- else %}
+             {% if path_array[1] == "v1" and page.category == "v1"/page_section %}
                 <ul>
                     <li class="toctree-l1">
                         <a class="reference internal" href="{{ nav_item.url | absolute_url}}">{{ nav_item.title }}</a>
@@ -42,19 +45,33 @@
                     {%- assign next_page = nav_item %}
                     {%- assign set_next_page = false %}
                 {% endif %}
+              {%- endif %}
+              {% if path_array[1] == "p1" and page.category == "p1"/page_section %}
+                <ul>
+                    <li class="toctree-l1">
+                        <a class="reference internal" href="{{ nav_item.url | absolute_url}}">{{ nav_item.title }}</a>
+                    </li>
+                </ul>
+                {%- assign last_loop_page = nav_item %}
+                {%- if set_next_page %}
+                    {%- assign next_page = nav_item %}
+                    {%- assign set_next_page = false %}
+                {% endif %}
+              {%- endif %}  
             {%- endif %}
         {%- else %}
-            {%- assign sections = sections | append: path_array[1] | append: "|" %}
+            {%- assign sections = sections | append: path_array[2] | append: "|" %}
         {%- endif %}
     {%- endif %}
 {%- endfor %}
 
+
 {%- assign sections = sections | split: "|" | uniq | sort %}
 {%- for section in sections %}
     <p class="caption"><span class="caption-text">{{ section }}</span></p>
-    {%- for nav_item in nav %}
+      {%- for nav_item in nav %}
         {%- assign path_array = nav_item.dir | split: "/" %}
-        {%- assign page_section = path_array[1] %}
+        {%- assign page_section = path_array[2] %}
         {%- if page_section == section and nav_item.hide != true and nav_item.nav_exclude != true %}
             {%- if nav_item.url == page.url %}
                 {%- include toc.html html=content sanitize=true h_max=4 item_class="toctree-l%level%" %} 
@@ -63,6 +80,7 @@
                     {%- assign set_next_page = true %}
                 {%- endif %}
             {%- else %}
+              {% if path_array[1] == "v1" and page.category == "v1"/page_section %}
                 <ul>
                     <li class="toctree-l1">
                         <a class="reference internal" href="{{ nav_item.url | absolute_url}}">{{ nav_item.title }}</a>
@@ -73,7 +91,20 @@
                     {%- assign next_page = nav_item %}
                     {%- assign set_next_page = false %}
                 {% endif %}
+              {%- endif %}
+              {% if path_array[1] == "p1" and page.category == "p1"/page_section %}
+                <ul>
+                    <li class="toctree-l1">
+                        <a class="reference internal" href="{{ nav_item.url | absolute_url}}">{{ nav_item.title }}</a>
+                    </li>
+                </ul>
+                {%- assign last_loop_page = nav_item %}
+                {%- if set_next_page %}
+                    {%- assign next_page = nav_item %}
+                    {%- assign set_next_page = false %}
+                {% endif %}
+              {%- endif %}
             {%- endif %}
-        {%- endif %}
+        {%- endif %} 
     {%- endfor %}
 {%- endfor %}

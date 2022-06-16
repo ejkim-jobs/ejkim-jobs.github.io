@@ -2,6 +2,7 @@
 layout: default
 title: Theme Configuration
 nav_order: 1
+category: v1
 ---
 
 # Theme Configuration

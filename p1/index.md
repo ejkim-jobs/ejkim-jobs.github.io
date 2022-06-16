@@ -2,6 +2,7 @@
 layout: default
 title: Index
 nav_exclude: true
+category: p1
 ---
 
 # Welcome to Read The Docs Theme Project 1 for Jekyll and GitHub Pages
@@ -13,7 +14,7 @@ This is a port of the
 You are previewing the theme right now, as you navigate
 [this documentation](https://carlosperate.github.io/jekyll-theme-rtd):
 
-![screenshot](assets/img/screenshot.png)
+![screenshot](../assets/img/screenshot.png)
 
 The original [Read The Docs](https://readthedocs.org)
 [theme]((https://sphinx-rtd-theme.readthedocs.io)) was created for the
