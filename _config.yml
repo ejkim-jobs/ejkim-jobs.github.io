@@ -26,7 +26,7 @@ url: https://nuridocs.github.io
 
 logo: 'https://cdn.gukjenews.com/news/photo/202105/2231928_2223755_5416.jpeg'
 
-theme: jekyll-theme-rtd
+theme: jekyll-theme-dinky
 
 permalink: /:categories/:title
 
