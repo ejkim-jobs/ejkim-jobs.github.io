@@ -1,5 +1,22 @@
-<div role="search">
+  <div role="search">
     <form id="rtd-search-form" class="wy-form" action="{{ base_url }}/search.html" method="get">
         <input type="text" name="q" id="search-query" placeholder="Search docs" title="Type search term here" />
     </form>
-</div>
+</div> 
+ 
+<!-- {% if page.category == "v1" %}
+ <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="{{ base_url }}/v1/search.html" method="get">
+        <input type="text" name="q" id="search-query" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div> 
+ {% endif %}
+
+ 
+ {% if page.category == "p1" %}
+ <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="{{ base_url }}/p1/search.html" method="get">
+        <input type="text" name="q" id="search-query" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div> 
+ {% endif %} -->

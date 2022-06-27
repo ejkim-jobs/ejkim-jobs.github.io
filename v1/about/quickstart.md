@@ -24,7 +24,7 @@ running with this theme:
 
 And that's it!
 
-![steps screenshot](assets/img/quick-start-steps.png)
+![steps screenshot](../../assets/img/quick-start-steps.png)
 
 There are more configuration options explained in the rest of this theme
 documentation, or if you prefer it you can have a look at the

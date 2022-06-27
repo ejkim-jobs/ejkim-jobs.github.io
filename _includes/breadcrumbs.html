@@ -6,13 +6,12 @@
         <li>{{ page.title }}</li>
       {%- else %}
         {%- assign page_directories = page.dir | split: '/' %}
-        <li><a href="{{ site.url | absolute_url }}{{ site.github.baseurl }}">Docs</a>&raquo;</li>
-        {%- for dir in page_directories %}
-        {%- if forloop.first == false %}
-        <li>{{ dir | capitalize }} &raquo;</li>
-        {%- endif %}
-        {%- endfor %}
-        <li>{{ page.title }}</li>
+        <li><a href="{{ site.url | absolute_url }}">Docs</a>&raquo;</li>
+        <li><a href="{{ site.url }}/{{ page.category }}">{{ page_directories[1] | capitalize }}</a>&raquo;</li>
+        {%- if page_directories[2] %}
+          <li><a href="{{ page.url }}">{{ page_directories[2] | capitalize }}</a> &raquo;</li>
+        {%- endif %}   
+        <li>{{ page.title }}</li> 
       {%- endif %}
     {%- endif %}
     <li class="wy-breadcrumbs-aside">
