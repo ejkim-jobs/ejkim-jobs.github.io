@@ -12,54 +12,20 @@
 
     <!-- begin SEO -->
 
-
-
-
-
-
-
-
-
-    <title>Nuri Docs Home Example - Sites for Version and Project</title>
-
-
-
-
+    <title>Nuri Docs Home</title>
     <meta name="description" content="An example site and repo for controlling versions of a web site.">
 
-
-
-
-    <meta name="author" content="Anne Gentle">
+    <meta name="author" content="{{ site.site_author }}">
 
     <meta property="og:locale" content="en">
+    
     <meta property="og:site_name" content="Sites for Version and Project">
-    <meta property="og:title" content="Nuri Docs Home Example">
+    
+    <meta property="og:title" content="Nuri Docs Home">
+    
+    <link rel="canonical" href="{{ page.canonical_url }}">
 
-
-    <link rel="canonical" href="https://justwriteclick.github.io/versions-jekyll/latest/">
-    <meta property="og:url" content="https://justwriteclick.github.io/versions-jekyll/latest/">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- <meta property="og:url" content="https://justwriteclick.github.io/versions-jekyll/latest/">
 
     <script type="application/ld+json">
         {
@@ -69,17 +35,11 @@
             "url": "https://justwriteclick.github.io/versions-jekyll/latest",
             "sameAs": null
         }
-    </script>
-
-
-
-
-
+    </script> -->
 
     <!-- end SEO -->
 
-
-    <link href="https://justwriteclick.github.io/versions-jekyll/latest/feed.xml" type="application/atom+xml" rel="alternate" title="Jekyll Site for Versions Feed">
+    <!-- <link href="https://justwriteclick.github.io/versions-jekyll/latest/feed.xml" type="application/atom+xml" rel="alternate" title="Jekyll Site for Versions Feed"> -->
 
     <!-- http://t.co/dKP3o1e -->
     <meta name="HandheldFriendly" content="True">
@@ -92,6 +52,9 @@
 
     <!-- For all browsers -->
     <link rel="stylesheet" href="https://justwriteclick.github.io/versions-jekyll/latest/assets/css/main.css">
+
+     <link rel="stylesheet" href="assets/home.css">
+     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.css">
 
     <!--[if lte IE 9]>
   <style>
@@ -119,67 +82,56 @@
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
+    
+    <!-- <div class="masthead">
+        <div class="masthead__inner-wrap"> -->
+        <!-- <div class="masthead__inner-wrap"> -->
     <div class="masthead">
-        <div class="masthead__inner-wrap">
-            <div class="masthead__menu">
-                <nav id="site-nav" class="greedy-nav">
-                    <a class="site-title" href="https://nuridocs.github.io/">NuriFlex Docs Home Example</a>
-
-                    <ul class="visible-links">
-
-
-                        <li class="masthead__menu-item"><a href="https://nuridocs.github.io/v1/">Version 1</a></li>
+        <!-- <div class="masthead__inner-wrap">    -->
+        <div class="masthead__menu">
+            <nav id="site-nav" class="greedy-nav">
+              <div class="wy-side-nav-search">
+              <a href="{{ site.url }}"><img src="assets/img/nuri.png" class="logo" alt="Nuri Docs Home"></a>
+              </div>
+               <ul class="visible-links">
 
 
+                    <li class="masthead__menu-item"><a href="https://nuridocs.github.io/v1/">Version 1</a></li>
+
+
+                    <li class="masthead__menu-item"><a href="{{ site.url }}/p1/">Project 1</a></li>
+                </ul>
+                <button><div class="navicon"></div></button>
+                <ul class="hidden-links hidden"></ul>
+                <!-- <ul class="visible-links">  
+                   <li class="dropdown">
+                     <button class="dropbtn">Version</button>
+                        <ul class="dropdown-content">
+                            <li class="masthead__menu-item"><a href="https://nuridocs.github.io/v1/">Version 1</a></li>
+                        </ul>
+                    </li>
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Project<b class="caret"></b></a>
+                      <ul  class="visible-links">
                         <li class="masthead__menu-item"><a href="https://nuridocs.github.io/p1/">Project 1</a></li>
-
-
-                        <li class="masthead__menu-item"><a href="https://justwriteclick.github.io/versions-jekyll/4.1/">Version 4.1</a></li>
-
-
-                        <li class="masthead__menu-item"><a href="https://justwriteclick.github.io/versions-jekyll/4.2/">Version 4.2</a></li>
-
-
-                        <li class="masthead__menu-item"><a href="https://justwriteclick.github.io/versions-jekyll/latest/search/">Search</a></li>
-
-                    </ul>
-                    <button><div class="navicon"></div></button>
-                    <ul class="hidden-links hidden"></ul>
-                </nav>
-            </div>
-        </div>
+                      </ul>
+                  </li>
+                </ul>  
+                <button><div class="navicon"></div></button>
+                <ul class="hidden-links hidden"></ul> -->
+            </nav>
+        </div>  
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="page__hero--overlay" style="background-color: #6fa81e; ">
+    <div class="page__hero--overlay" style="background-color: #3091d1; ">
 
         <div class="wrapper">
             <h1 class="page__title" itemprop="headline">
-
-                Example Jekyll version landing page
-
-
+                Nuri Docs Home landing page
             </h1>
 
-
-
-            <p><a href="https://github.com/justwriteclick/versions-jekyll/" class="btn btn--light-outline btn--large"><i class='fa fa-terminal'></i> Go to repo</a></p>
-
+            <p><a href="https://github.com/nuridocs/nuridocs.github.io" class="btn btn--light-outline btn--large"><i class='fa fa-terminal'></i> Go to repo</a></p>
         </div>
-
-
     </div>
 
 
@@ -211,7 +163,7 @@
             <!-- start custom footer snippets -->
 
             <!-- end custom footer snippets -->
-            <div class="page__footer-follow">
+            <!-- <div class="page__footer-follow">
                 <ul class="social-icons">
 
                     <li><strong>Follow:</strong></li>
@@ -220,12 +172,11 @@
 
 
 
-
                     <li><a href="https://justwriteclick.github.io/versions-jekyll/latest/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
                 </ul>
-            </div>
+            </div> -->
 
-            <div class="page__footer-copyright">&copy; 2022 Example for versions. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+            <div class="page__footer-copyright">&copy; 2022 NuriFlex Co.,Ltd. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
         </footer>
     </div>
