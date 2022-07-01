@@ -9,9 +9,7 @@
 
 <head>
     <meta charset="utf-8">
-
     <!-- begin SEO -->
-
     <title>Nuri Docs Home</title>
     <meta name="description" content="An example site and repo for controlling versions of a web site.">
 
@@ -36,6 +34,16 @@
             "sameAs": null
         }
     </script> -->
+
+    <script src="assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+    //페이지가 로드되면 실행한다.
+    $(document).ready( function() {	
+      $("#contents").load("callout.html");	
+    //~이렇게 한줄만 해주면 알아서 contents에 testContents.html파일을 넣어 준다.
+    });
+    </script>
+
 
     <!-- end SEO -->
 
@@ -83,23 +91,16 @@
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
     
-    <!-- <div class="masthead">
-        <div class="masthead__inner-wrap"> -->
-        <!-- <div class="masthead__inner-wrap"> -->
-    <div class="masthead">
-        <!-- <div class="masthead__inner-wrap">    -->
+<div class="masthead">
+   <div class="masthead__inner-wrap">
         <div class="masthead__menu">
             <nav id="site-nav" class="greedy-nav">
               <div class="wy-side-nav-search">
-              <a href="{{ site.url }}"><img src="assets/img/nuri.png" class="logo" alt="Nuri Docs Home"></a>
+              <a href="https://nuridocs.github.io"><img src="assets/img/nuri.png" class="logo" alt="Nuri Docs Home"></a>
               </div>
-               <ul class="visible-links">
-
-
+                <ul class="visible-links">
                     <li class="masthead__menu-item"><a href="https://nuridocs.github.io/v1/">Version 1</a></li>
-
-
-                    <li class="masthead__menu-item"><a href="{{ site.url }}/p1/">Project 1</a></li>
+                    <li class="masthead__menu-item"><a href="https://nuridocs.github.io/p1/">Project 1</a></li>
                 </ul>
                 <button><div class="navicon"></div></button>
                 <ul class="hidden-links hidden"></ul>
@@ -122,6 +123,7 @@
             </nav>
         </div>  
     </div>
+</div>   
 
     <div class="page__hero--overlay" style="background-color: #3091d1; ">
 
@@ -130,7 +132,7 @@
                 Nuri Docs Home landing page
             </h1>
 
-            <p><a href="https://github.com/nuridocs/nuridocs.github.io" class="btn btn--light-outline btn--large"><i class='fa fa-terminal'></i> Go to repo</a></p>
+            <p><a href="https://github.com/nuridocs/nuridocs.github.io" class="btn btn--light-outline btn--large"><i class='fa fa-terminal'></i> Go to Repo</a></p>
         </div>
     </div>
 
@@ -140,20 +142,36 @@
         <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
             <meta itemprop="headline" content="Example Jekyll version landing page">
 
-
-
-
             <section class="page__content" itemprop="text">
-                <p>This page is the landing page for the baseurl’s root index.html, which builds to either <code class="highlighter-rouge">n.n/index.html</code> or <code class="highlighter-rouge">latest/index.html</code>, but the should also have a root
-                    index.html.
+                <p>This page is the landing page for Nuri Product's User Guides.
+                You can choose the User Guide depending on its <code class="highlighter-rouge">project</code> or <code class="highlighter-rouge">version </code> on this page.
                 </p>
 
-                <p>Read the <a href="/versions-jekyll/latest/user-guide/">Cool Service User Guide</a>.</p>
+                <div markdown="span" class="bs-callout bs-callout-primary"><span style="color:#1d5dbd"><i
+                        class="fa fa-info-circle"></i><span
+                        class="calloutTitle"><b> Note</b></span>
+                        <br /></span>
+                        <span class="calloutText">
+                        Even if the guides for the same product are for the same product, the contents of the documents may be slightly different for each project and version.
+                        <br>All document sets provided by <a href="https://nuridocs.github.io">Nuri Docs</a> are managed as a single Repo
+                        <a class="social-btn" href="https://github.com/nuridocs/nuridocs.github.io" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-github"></i></a>.
+                        </span>
+                </div>
+                <p>
+                The contents of the project and version docsets are managed in folders such as p1 and v1 in the root path of the Nuri Docs repository, respectively.
+                In this case, the URL of each document set becomes 
+                <code>example.com/v1</code> and <code>example.com/p1</code>.
+                <br></p>
 
-                <p>Read the <a href="/versions-jekyll/latest/install-guide/">Cool Service Install Guide</a>.</p>
-
-                <p>For each new release, build with a <code class="highlighter-rouge">_config.n.n.yml</code> file in addition to the <code class="highlighter-rouge">_config.yml</code> file which builds to a <code class="highlighter-rouge">baseurl</code>                    of <code class="highlighter-rouge">repo-name/current</code>.</p>
-
+                <p>Here are example URLs for the each document set  provided by Nuri Docs.
+                <ul>
+                  <li>
+                  Go to <a href="https://nuridocs.github.io/v1">User Guide Version 1</a>.
+                  </li>
+                  <li>
+                  Go to <a href="https://nuridocs.github.io/p1">User Guide Project 1</a>.
+                  </li>
+                </ul>
             </section>
         </article>
     </div>
@@ -176,15 +194,12 @@
                 </ul>
             </div> -->
 
-            <div class="page__footer-copyright">&copy; 2022 NuriFlex Co.,Ltd. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+            <div class="page__footer-copyright"><span style="color:#2c9bd3"> &copy; 2022 NuriFlex Co.,Ltd. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes </span></a></div>
 
         </footer>
     </div>
 
     <script src="https://justwriteclick.github.io/versions-jekyll/latest/assets/js/main.min.js"></script>
-
-
-
 
 
 </body>
